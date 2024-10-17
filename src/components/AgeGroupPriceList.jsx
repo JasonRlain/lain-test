@@ -19,7 +19,10 @@ function AgeGroupPriceList({ onChange }) {
     setResult(temp);
   };
   const validate = () => {
-    if (result.length === 0) return;
+    if (result.length === 0) {
+      setDisabled(false);
+      return;
+    }
     let stack = [];
     for (let i = 0; i < result.length; i++) {
       stack.push(result[i].ageGroup);
