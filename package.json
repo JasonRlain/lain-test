@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cy:open": "cypress open",
+    "cy:unit":"npx cypress run --spec cypress/unit/*.cy.js"
   },
   "eslintConfig": {
     "extends": [
