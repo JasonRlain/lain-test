@@ -26,7 +26,7 @@ export function getNumberIntervals_test(intervals) {
       start = flag ? start : key;
       flag = true;
     } else {
-      if (flag) overlap.push([start, end]);
+      if (flag) overlap.push([parseInt(start), parseInt(end)]);
       start = key;
       flag = false;
     }
@@ -37,7 +37,7 @@ export function getNumberIntervals_test(intervals) {
   }
 
   if (flag) {
-    overlap.push([start, end]);
+    overlap.push([parseInt(start), parseInt(end)]);
   }
 
   // console.log(overlap);
@@ -51,7 +51,7 @@ export function getNumberIntervals_test(intervals) {
       start = flag ? start : key;
       flag = true;
     } else {
-      if (flag) notInclude.push([start, end]);
+      if (flag) notInclude.push([parseInt(start), parseInt(end)]);
       start = key;
       flag = false;
     }
@@ -62,7 +62,7 @@ export function getNumberIntervals_test(intervals) {
   }
 
   if (flag) {
-    notInclude.push([start, end]);
+    notInclude.push([parseInt(start), parseInt(end)]);
   }
 
   // console.log(notInclude);
